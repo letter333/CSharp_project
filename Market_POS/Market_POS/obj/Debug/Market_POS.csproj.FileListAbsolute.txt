@@ -1,0 +1,36 @@
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\bin\Debug\Market_POS.exe.config
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\bin\Debug\Market_POS.exe
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\bin\Debug\Market_POS.pdb
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.AssemblyReference.cache
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.SuggestedBindingRedirects.cache
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\obj\Debug\Market_POS.Form1.resources
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\obj\Debug\Market_POS.Properties.Resources.resources
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.GenerateResource.cache
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.CoreCompileInputs.cache
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\obj\Debug\Market_POS.exe
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\obj\Debug\Market_POS.pdb
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\obj\Debug\Market_POS.Form2.resources
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\bin\Debug\Market_POS.exe.config
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\bin\Debug\Market_POS.exe
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\bin\Debug\Market_POS.pdb
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\obj\Debug\Market_POS.Form1.resources
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\obj\Debug\Market_POS.Form2.resources
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\obj\Debug\Market_POS.Properties.Resources.resources
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\obj\Debug\Market_POS.exe
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\obj\Debug\Market_POS.pdb
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\bin\Debug\Market_POS.exe.config
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\bin\Debug\Market_POS.exe
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\bin\Debug\Market_POS.pdb
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.AssemblyReference.cache
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.SuggestedBindingRedirects.cache
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.Form1.resources
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.Form2.resources
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.Properties.Resources.resources
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.GenerateResource.cache
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.CoreCompileInputs.cache
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.exe
+C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.pdb
