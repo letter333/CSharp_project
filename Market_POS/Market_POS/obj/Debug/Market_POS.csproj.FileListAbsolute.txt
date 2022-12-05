@@ -34,3 +34,5 @@ C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.Generat
 C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.csproj.CoreCompileInputs.cache
 C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.exe
 C:\Users\wkdsk\Desktop\Market_POS\Market_POS\obj\Debug\Market_POS.pdb
+C:\Users\wkdsk\Desktop\코딩 공부\C언어\C샵(.net FrameWork)\Market_POS\Market_POS\obj\Debug\Market_POS.Form3.resources
+C:\Users\KB\Desktop\OSR\CSharp_project\Market_POS\Market_POS\obj\Debug\Market_POS.Form3.resources

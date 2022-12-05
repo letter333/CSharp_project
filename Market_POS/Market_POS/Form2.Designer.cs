@@ -100,6 +100,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(671, 158);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 21);
             this.textBox2.TabIndex = 6;
             // 
@@ -241,7 +242,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "판매내역";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
