@@ -37,9 +37,9 @@ namespace Market_POS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
-        //string sqlcon = "Data Source = 192.168.0.106; Initial Catalog= DataBase; User "
-          
+
+            //string sqlcon = "Data Source = 192.168.0.106; Initial Catalog= DataBase; User "
+
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -80,30 +80,29 @@ namespace Market_POS
             textBox3.Text = all.ToString();
         }
 
-    
+
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "")
+            if (textBox1.Text == "")
             {
                 MessageBox.Show("항목을 정확히 입력해주세요");
                 textBox1.Clear();
-                textBox2.Clear();
             }
             else
             {
                 //합계를 구하기 위해 품목명과 가격을 정의하고 total로 합침
-                decimal price = decimal.Parse(textBox2.Text);
+                //decimal price = decimal.Parse(textBox2.Text);
+                decimal price = DBHelper.getPrice(textBox1.Text);
                 decimal count = numericUpDown1.Value;
                 decimal total = price * count;
 
                 //text박스내의 정보를 표에 삽입
-                table.Rows.Add(textBox1.Text, textBox2.Text, numericUpDown1.Value, total);
+                table.Rows.Add(textBox1.Text, price, numericUpDown1.Value, total);
                 dataGridView1.DataSource = table;
 
                 //text박스의 정보 초기화
                 textBox1.Clear();
-                textBox2.Clear();
                 numericUpDown1.Value = 1;
 
                 //합계
@@ -117,44 +116,46 @@ namespace Market_POS
         }
 
         private void button3_Click(object sender, EventArgs e)
-       {
-         
-                //각 행의 정보를 반복문으로 불러온다
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+        {
+
+            //각 행의 정보를 반복문으로 불러온다
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                string Name = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                string Price = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                string Count = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                string Total = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                
+
+
+                int nowStock = DBHelper2.NowStock(Name, Count);
+                if (nowStock >= int.Parse(Count))
                 {
-                    string Name = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                    string Price = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                    string Count = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                    string Total = dataGridView1.Rows[i].Cells[3].Value.ToString();
-
-                    int nowStock = DBHelper2.NowStock(Name, Count);
-                    if(nowStock >= int.Parse(Count))
-                    {
-                        DBHelper2.StockCount(Name, Count);
-                    } else
-                    {
-                        MessageBox.Show($"{Name}의 재고가 부족합니다.");
-                        continue;
-                    }
-                    if(i == dataGridView1.Rows.Count - 1)
-                    {
-                        MessageBox.Show("계산되었습니다.");
-                        DBHelper.insertSales(Name, Price, Count, Total, i);
-
-                        //데이터 그리드뷰 초기화
-                        int rowCount = dataGridView1.Rows.Count;
-                        for (int n = 0; n < rowCount; n++)
-                        {
-                            if (dataGridView1.Rows[0].IsNewRow == false)
-                                dataGridView1.Rows.RemoveAt(0);
-                        }
-
-                        //합계창 초기화
-                        textBox3.Text = "0";
+                    DBHelper2.StockCount(Name, Count);
                 }
-                }           
+                else
+                {
+                    MessageBox.Show($"{Name}의 재고가 부족합니다.");
+                    dataGridView1.Rows.RemoveAt(i);
+                    continue;
+                }
+
+           
+                    DBHelper.insertSales(Name, Price, Count, Total);
+
+                
+                
+            }
+                    textBox3.Text = "0";
+                    MessageBox.Show("계산되었습니다.");
+
+                    //합계창 초기화
 
         }
-        
+
+        private void 점포수ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form5().ShowDialog();
+        }
     }
 }

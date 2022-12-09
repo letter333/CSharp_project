@@ -33,8 +33,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -47,6 +45,7 @@
             this.재고현황ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.물가조회ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.posdatasetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.점포수ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -93,28 +92,11 @@
             this.textBox1.Size = new System.Drawing.Size(142, 21);
             this.textBox1.TabIndex = 5;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(689, 163);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 12);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "가격";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(691, 188);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(142, 21);
-            this.textBox2.TabIndex = 7;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(689, 224);
+            this.label4.Location = new System.Drawing.Point(689, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 12);
             this.label4.TabIndex = 8;
@@ -124,7 +106,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(689, 284);
+            this.label5.Location = new System.Drawing.Point(689, 263);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 12);
             this.label5.TabIndex = 10;
@@ -133,7 +115,7 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(691, 313);
+            this.textBox3.Location = new System.Drawing.Point(691, 292);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.ShortcutsEnabled = false;
@@ -172,7 +154,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(691, 248);
+            this.numericUpDown1.Location = new System.Drawing.Point(691, 201);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(142, 21);
             this.numericUpDown1.TabIndex = 15;
@@ -182,7 +164,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.판매내역ToolStripMenuItem,
             this.재고현황ToolStripMenuItem,
-            this.물가조회ToolStripMenuItem});
+            this.물가조회ToolStripMenuItem,
+            this.점포수ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(888, 24);
@@ -214,6 +197,13 @@
             // 
             this.posdatasetBindingSource.DataSource = typeof(Market_POS.pos_dataset);
             // 
+            // 점포수ToolStripMenuItem
+            // 
+            this.점포수ToolStripMenuItem.Name = "점포수ToolStripMenuItem";
+            this.점포수ToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.점포수ToolStripMenuItem.Text = "점포 수";
+            this.점포수ToolStripMenuItem.Click += new System.EventHandler(this.점포수ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -226,8 +216,6 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
@@ -253,8 +241,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
@@ -267,6 +253,7 @@
         private System.Windows.Forms.ToolStripMenuItem 재고현황ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 물가조회ToolStripMenuItem;
         private System.Windows.Forms.BindingSource posdatasetBindingSource;
+        private System.Windows.Forms.ToolStripMenuItem 점포수ToolStripMenuItem;
     }
 }
 

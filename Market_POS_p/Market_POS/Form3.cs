@@ -85,8 +85,7 @@ namespace Market_POS
                 MessageBox.Show("검색 정보를 입력해주세요");
             }
             else
-            {
-                
+            {              
                 try
                 {
                     string valueToSearch = textBox1.Text;
@@ -99,7 +98,6 @@ namespace Market_POS
                 }
                 catch (Exception er)
                 {
-
                     MessageBox.Show(er.Message + " 조회 오류");
                 }
                 finally
@@ -112,12 +110,6 @@ namespace Market_POS
         //추가
         private void button3_Click(object sender, EventArgs e)
         {
-            /*  for (int i = 0; i < dataGridView1.RowCount; i++)
-              {
-                 if (textBox2.Text == dataGridView1.Rows[i].Cells[2].Value)
-                      MessageBox.Show("상품 번호 중복");
-              }*/
-
 
             string i_name = textBox3.Text.ToString();
             string i_price = textBox4.Text.ToString();

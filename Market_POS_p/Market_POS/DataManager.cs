@@ -30,7 +30,7 @@ namespace Market_POS
                     pos.price = int.Parse(item["price"].ToString());
                     pos.count = int.Parse(item["count"].ToString());
                     pos.total = int.Parse(item["total"].ToString());
-                 //   pos.c_cum = int.Parse(item[" c_cum"].ToString());
+                    pos.c_num = DateTime.Parse(item["c_num"].ToString());
                     Sales.Add(pos);
                 }
             }

@@ -17,8 +17,8 @@ namespace Market_POS
         public static SqlDataAdapter da;
         public static DataSet ds;
         public static DataTable dt;
-       
-       
+
+
         //DB연결
         public static void ConnectDB()
         {//접속해주는 함수
@@ -68,17 +68,18 @@ namespace Market_POS
         }
 
         //데이터 추가
-        public static void insertSales (string name, string count, string price, string total, int i)
+        public static void insertSales(string name, string price, string count, string total)
         {
+            
             try
             {
                 ConnectDB(); //db 연결
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn; //어디에 커맨드 보낼지 지정
-                cmd.CommandText = string.Format("INSERT INTO sales_tb(name,price,count,total,c_num) VALUES  ('{0}',{1},{2},{3},{4})", @name, @price, @count, @total, @i + 1);
+                cmd.CommandText = string.Format("INSERT INTO sales_tb(name,price,count,total,c_num) VALUES  ('{0}',{1},{2},{3},GETDATE())", @name, @price, @count, @total);
                 cmd.ExecuteNonQuery();
-
+             
             }
             catch (Exception e)
             {
@@ -121,7 +122,7 @@ namespace Market_POS
         }
 
         //데이터 수정
-        public static void modifySales(string no,string name, int price, int count, int total)
+        public static void modifySales(string no, string name, int price, int count, int total)
         {
             try
             {
@@ -130,7 +131,7 @@ namespace Market_POS
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = string.Format(" UPDATE[MarketPos].[dbo].[sales_tb] SET name = '{1}', price = {2}, count = {3}, total = {4} " +
-                    "WHERE no = {0};",@no, @name, @price, @count, total );
+                    "WHERE no = {0};", @no, @name, @price, @count, total);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -139,9 +140,9 @@ namespace Market_POS
                 System.Windows.Forms.MessageBox.Show(e.Message + "modify");
                 System.Windows.Forms.MessageBox.Show(e.StackTrace + "modify");
             }
-            finally 
-            { 
-                conn.Close(); 
+            finally
+            {
+                conn.Close();
             }
         }
         //데이터 조회
@@ -174,5 +175,36 @@ namespace Market_POS
 
         }
 
+        public static int getPrice(string valueToSearch)
+        {
+            int price = 0;
+            try
+            {
+                ConnectDB(); //db 연결
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn; //어디에 커맨드 보낼지 지정
+                cmd.CommandText = string.Format("SELECT i_price FROM[MarketPos].[dbo].[stock_tb] WHERE i_name = '" + valueToSearch + "';");
+                da = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                da.Fill(ds, "stock_tb");
+                dt = ds.Tables[0];
+
+                foreach (DataRow item in DBHelper.dt.Rows)
+                {
+                    price = int.Parse(item[0].ToString());
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("오류");
+            }
+            finally
+            {
+                conn.Close(); //db 연결 해제
+            }
+            return price;
+        }
     }
 }

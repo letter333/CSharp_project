@@ -83,8 +83,6 @@ namespace Market_POS
         //검색
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             if (textBox1.Text == "")
             {
                 MessageBox.Show("검색 정보를 입력해주세요");
@@ -95,24 +93,18 @@ namespace Market_POS
                 {
                     string valueToSearch = textBox1.Text;
                     MessageBox.Show($"{textBox1.Text}을 조회합니다.....");
-
-
                     dataGridView1.DataSource = null;
                     DataManager.Load(valueToSearch);
                     dataGridView1.DataSource = DataManager.Sales;
 
                 }
+
                 catch (Exception er)
-                {
+                { MessageBox.Show(er.Message + " 조회 오류");  }
 
-                    MessageBox.Show(er.Message + " 조회 오류");
-                }
                 finally
-                {
-                    conn.Close();
-                }
+                { conn.Close();}
             }
-
         }
 
 
@@ -127,6 +119,7 @@ namespace Market_POS
             dataGridView1.DataSource = DataManager.Sales;
         }
 
+        
         //새로고침
         private void button4_Click(object sender, EventArgs e)
         {
@@ -139,10 +132,9 @@ namespace Market_POS
                 //+"" 하든지 .ToString() 하기
                 textBox2.Text = DataManager.Sales[0].no.ToString();
                 textBox3.Text = DataManager.Sales[0].name.ToString();
-                textBox4.Text = DataManager.Sales[0].price.ToString();
-                textBox5.Text = DataManager.Sales[0].count.ToString();
+                textBox4.Text = DataManager.Sales[0].count.ToString();
+                textBox5.Text = DataManager.Sales[0].price.ToString();
                 textBox6.Text = DataManager.Sales[0].total.ToString();
-
             }
             catch (Exception)
             {
@@ -155,7 +147,6 @@ namespace Market_POS
 
             if (DataManager.Sales.Count > 0)
             {
-
                 dataGridView1.DataSource = DataManager.Sales;
             }
         }
@@ -172,11 +163,10 @@ namespace Market_POS
                 textBox3.Clear();
                 textBox4.Clear();
             }
-
             else
             {
-                int price = int.Parse(textBox4.Text);
-                int count = int.Parse(textBox5.Text);
+                int price = int.Parse(textBox5.Text);
+                int count = int.Parse(textBox4.Text);
                 int total = price * count;
 
                 textBox5.Text = total.ToString();
@@ -211,6 +201,7 @@ namespace Market_POS
             this.Close();
         }
 
+        //셀클릭
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
           
@@ -219,8 +210,8 @@ namespace Market_POS
 
             textBox2.Text = Sales.no.ToString();
             textBox3.Text = Sales.name.ToString();
-            textBox4.Text = Sales.price.ToString();
-            textBox5.Text = Sales.count.ToString();
+            textBox4.Text = Sales.count.ToString();
+            textBox5.Text = Sales.price.ToString();
             textBox6.Text = Sales.total.ToString();
         }
     }

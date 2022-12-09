@@ -13,6 +13,6 @@ namespace Market_POS
         public int price { get; set; }
         public int count { get; set; }
         public int total { get; set; }
-        public int c_cum { get; set; }
+        public DateTime c_num { get; set; }
     }
 }
